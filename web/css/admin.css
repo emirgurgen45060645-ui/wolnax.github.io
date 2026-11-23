@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #ffe4e1;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkred;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f1017;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00ff88;
+}

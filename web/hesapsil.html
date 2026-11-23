@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Sil</title>
+    <link rel="stylesheet" href="css/hesapsil.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Hesap Sil</h2>
+
+    <div class="input-group">
+        <input type="text" id="kullanici" required placeholder=" ">
+        <label>Kullanıcı Adı</label>
+    </div>
+
+    <div class="input-group">
+        <input type="password" id="sifre" required placeholder=" ">
+        <label>Şifre</label>
+    </div>
+
+    <button onclick="onayGoster()">Hesabı Sil</button>
+    <br><br>
+    <button onclick="don()">Anasayfa</button>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>Hesabını silmek istediğine emin misin?</p>
+            <button onclick="hesapSil()">Evet</button>
+            <button onclick="modalKapat()">Hayır</button>
+        </div>
+    </div>
+</div>
+<audio src="music/loveli lori & ovg! - love for you (Official Audio)(_nQVaRFP-ppw_).m4a" loop autoplay></audio>
+<script src="/js/hesapsil.js"></script>
+</body>
+</html>

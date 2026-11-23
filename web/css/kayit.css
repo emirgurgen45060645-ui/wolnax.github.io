@@ -1,0 +1,73 @@
+/* Aynı giris.css ile aynı olabilir, sadece renkler değişebilir */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.box h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.satir{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.satir label{
+    width: 110px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.box input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.box button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.box button:hover{
+    background: #0b7dda;
+}
+
+.box p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.box a{
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.box a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,82 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    background-color: #7aa18a7c;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f1017;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00ff88;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.welcome {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-top: 30vh;   /* Ekranın %30'u kadar aşağı */
+}
+
+.welcome h1 {
+    animation: dropDown 1s ease-out;
+}
+
+/* Animasyon */
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-60px); /* final pozisyonun */
+    }
+}

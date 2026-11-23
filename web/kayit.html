@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayıt Ol</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #28a745, #5dd39e);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 320px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #28a745;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #999;
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -15px;
+    font-size: 13px;
+    color: #28a745;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e7e34;
+}
+</style>
+
+<script>
+function kayitOl() {
+    let kullaniciAdi = document.getElementById("kullanici").value;
+    let sifre = document.getElementById("sifre").value;
+
+    if (kullaniciAdi === "" || sifre === "") {
+        alert("Lütfen tüm alanları doldurun!");
+        return;
+    }
+
+    if (kullaniciAdi === "admin") {
+        alert("Bu kullanıcı adı kullanılamaz!");
+        return;
+    }
+
+    if (localStorage.getItem(kullaniciAdi)) {
+        alert("Bu kullanıcı adı zaten kayıtlı!");
+        return;
+    }
+
+    localStorage.setItem(kullaniciAdi, sifre);
+    alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+    window.location.href = "index.html"; // giriş sayfan
+}
+</script>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Kayıt Ol</h2>
+
+    <div class="input-group">
+        <input type="text" id="kullanici" required placeholder=" ">
+        <label>Kullanıcı Adı</label>
+    </div>
+
+    <div class="input-group">
+        <input type="password" id="sifre" required placeholder=" ">
+        <label>Şifre</label>
+    </div>
+
+    <button onclick="kayitOl()">Kayıt Ol</button>
+    <p>Zaten hesabınız var mı? <a href="index.html">Giriş Yap</a></p>
+</div>
+<audio src="music/loveli lori & ovg! - love for you (Official Audio)(_nQVaRFP-ppw_).m4a" loop autoplay></audio>
+</body>
+</html>
